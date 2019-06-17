@@ -50,7 +50,7 @@ func reader(conn *websocket.Conn) {
 		if err != nil {
 			log.Println(err)
 		}
-		percentConv := mapPercent(analogRead, 250, 1023, 100, 0)
+		percentConv := mapPercent(analogRead, 0, 1023, 100, 0)
 		read := sensor{
 			Humidity: percentConv,
 		}
